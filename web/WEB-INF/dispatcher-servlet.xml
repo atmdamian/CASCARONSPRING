@@ -21,6 +21,7 @@
             <props>
                 <prop key="index.htm">indexController</prop>
                 <prop key="login.htm">LoginController</prop>
+                 <prop key="catalogoEquipos.htm">CatalogoEquiposController</prop>
             </props>
         </property>
     </bean>
@@ -35,6 +36,10 @@
     -->
           <bean name="LoginController"
             class="development.partners.controllers.LoginController" />
+          
+            <bean name="CatalogoEquiposController"
+            class="development.partners.controllers.CatalogoEquipoController" />
+            
 
     <bean name="indexController"
           class="org.springframework.web.servlet.mvc.ParameterizableViewController"

@@ -16,7 +16,8 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <sf:form>
+        <h1>${titulo}</h1>
+        <sf:form >
             <div>
                 <sf:label path="no_serie" >NO. Serie:</sf:label>
                 <sf:input path="no_serie"/>
@@ -57,6 +58,20 @@
                     <sf:label path="estado">Estado Equipo:</sf:label>
                     </div>
                     <sf:textarea path="estado" rows="5" cols="30" />                                 
+                </div>
+                <div>
+                    
+                    <input type="submit" value="ENVIAR"/>
+                </div>
+                <div>
+                    ${no_serie}<br>
+                    ${marca}<br>
+                    ${modelo}<br>
+                    ${so}<br>
+                    ${hd}<br>
+                    ${ram}<br>
+                    ${ip}<br>
+                    ${estado}<br>
                 </div>
         </sf:form>
     </body>

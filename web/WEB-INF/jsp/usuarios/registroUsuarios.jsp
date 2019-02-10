@@ -40,6 +40,7 @@
                     <sf:options items="${estados}"></sf:options>
                 </sf:select>
             </div>
+            <br>
 <!--            <div>
                 <label>Genero</label>
                       <sf:checkboxes items="${sexo}" path="hobbie" ></sf:checkboxes> 

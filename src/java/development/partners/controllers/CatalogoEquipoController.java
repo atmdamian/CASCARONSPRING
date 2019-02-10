@@ -5,12 +5,14 @@
  */
 package development.partners.controllers;
 
+import development.partners.daos.EquipoDaoImpl;
 import development.partners.models.Equipo;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -23,7 +25,10 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class CatalogoEquipoController {
     @RequestMapping(value="catalogoEquipos", method=RequestMethod.GET)
-    public ModelAndView verCatalogoEquipos(){
+    public ModelAndView verCatalogoEquipos(ModelMap model){
+        EquipoDaoImpl equipoDI= new EquipoDaoImpl();
+        
+        
         
         return new ModelAndView("catalogos/catalogoEquipos","command",new Equipo());
     }

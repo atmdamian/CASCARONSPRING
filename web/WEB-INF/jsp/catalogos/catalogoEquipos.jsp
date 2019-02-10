@@ -58,6 +58,10 @@
                     </div>
                     <sf:textarea path="estado" rows="5" cols="30" />                                 
                 </div>
+                <div>
+                    <input type="submit" value="Enviar" />
+                </div>
+                
         </sf:form>
     </body>
 </html>

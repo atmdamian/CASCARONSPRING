@@ -21,7 +21,9 @@
             <props>
                 <prop key="index.htm">indexController</prop>
                 <prop key="login.htm">LoginController</prop>
-                 <prop key="catalogoEquipos.htm">CatalogoEquiposController</prop>                 
+                 <prop key="catalogoEquipos.htm">CatalogoEquiposController</prop>
+                   
+                  <prop key="mostrarEquipos.htm">CatalogoEquiposController</prop>                 
             </props>
         </property>
     </bean>

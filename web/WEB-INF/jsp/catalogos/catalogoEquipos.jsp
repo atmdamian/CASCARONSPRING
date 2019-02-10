@@ -17,7 +17,7 @@
     </head>
     <body>
         <h1>${titulo}</h1>
-        <sf:form >
+        <sf:form>
             <div>
                 <sf:label path="no_serie" >NO. Serie:</sf:label>
                 <sf:input path="no_serie"/>

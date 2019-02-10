@@ -32,8 +32,16 @@ public class CatalogoEquipoController {
     }
     
     @RequestMapping(value="catalogoEquipos", method=RequestMethod.POST)
-    public ModelAndView enviarEquipo(@ModelAttribute("enviarEquipo") Equipo equipo, Model model){
+    public ModelAndView enviarEquipo(@ModelAttribute("MAEquipo")Equipo equipo,ModelMap model){
         
+       model.put("no_serie", equipo.getNo_serie());
+       model.put("marca",equipo.getMarca());
+       model.put("modelo",equipo.getModelo());
+       model.put("so",equipo.getSo());
+       model.put("hd",equipo.getHd());
+       model.put("ram",equipo.getRam());
+       model.put("ip", equipo.getIp());
+       model.put("estado", equipo.getEstado());
        
         return new ModelAndView("catalogos/resultadoCatalogoEquipos");
     }

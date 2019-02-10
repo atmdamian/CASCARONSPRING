@@ -12,6 +12,13 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+       ${no_serie}<br>
+       ${marca}<br>
+       ${modelo}<br>
+       ${so}<br>
+       ${hd}<br>
+       ${ram}<br>
+       ${ip}<br>
+       ${estado}<br>
     </body>
 </html>

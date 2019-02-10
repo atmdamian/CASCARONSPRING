@@ -22,9 +22,11 @@
                 <prop key="index.htm">indexController</prop>
                 <prop key="login.htm">LoginController</prop>
                  <prop key="catalogoEquipos.htm">CatalogoEquiposController</prop>
+                 <prop key="registroUsuarios.htm">UsuariosController</prop>
             </props>
         </property>
     </bean>
+    
 
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver"
@@ -40,9 +42,10 @@
             <bean name="CatalogoEquiposController"
             class="development.partners.controllers.CatalogoEquipoController" />
             
-
+            <bean name="UsuariosController" class="development.partners.controllers.RegistroUsuariosController"/>
     <bean name="indexController"
           class="org.springframework.web.servlet.mvc.ParameterizableViewController"
           p:viewName="index" />
+    
 
 </beans>

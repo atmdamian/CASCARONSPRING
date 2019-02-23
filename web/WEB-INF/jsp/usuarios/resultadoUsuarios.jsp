@@ -24,8 +24,8 @@
         ${estado}<br>
 <!--        ${sexo}<br>
         ${hobbie}<br>-->
-        
-        
-        
+
+       
+
     </body>
 </html>

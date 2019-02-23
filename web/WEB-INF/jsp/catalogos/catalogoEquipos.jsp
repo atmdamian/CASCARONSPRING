@@ -63,5 +63,15 @@
                 </div>
                 
         </sf:form>
+        
+         <table>
+            <c:forEach var="lista" items="${listaEquipo}">
+
+                <tr >
+                    <td>${lista} </td>
+
+                </tr>
+            </c:forEach>
+        </table>
     </body>
 </html>

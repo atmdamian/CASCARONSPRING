@@ -25,11 +25,10 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class CatalogoEquipoController {
     @RequestMapping(value="catalogoEquipos", method=RequestMethod.GET)
-    public ModelAndView verCatalogoEquipos(ModelMap model){
-        EquipoDaoImpl equipoDI= new EquipoDaoImpl();
-        
-        
-        
+    public ModelAndView vistaCatalogoEquipos(ModelMap model){
+      
+        //model.addAttribute("listaEquipo",equipoDI.listaEquipos());
+       // System.out.println("----------------------------------"+lista);
         return new ModelAndView("catalogos/catalogoEquipos","command",new Equipo());
     }
     

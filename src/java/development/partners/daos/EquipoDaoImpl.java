@@ -29,7 +29,7 @@ public class EquipoDaoImpl implements EquipoDao {
     @Override
     public List<Equipo> listaEquipos() {
         ResultSet rs;
-        String queryVerEquipos = "SELECT * FROM cascaronbd";
+        String queryVerEquipos = "SELECT * FROM equipo";
         List<Equipo> listaEquipos = new ArrayList<>();
 
         try {
@@ -40,7 +40,7 @@ public class EquipoDaoImpl implements EquipoDao {
                 equipo.setNo_serie(rs.getString("no_serie"));
                 equipo.setMarca(rs.getString("marca"));
                 equipo.setModelo(rs.getString("modelo"));
-                equipo.setSo(rs.getString("so"));
+                equipo.setSo(rs.getString("s0"));
                 equipo.setHd(rs.getString("hd"));
                 equipo.setRam(rs.getString("ram"));
                 equipo.setIp(rs.getString("ip"));
@@ -50,8 +50,25 @@ public class EquipoDaoImpl implements EquipoDao {
             }
             conexion.desconecta();
         } catch (SQLException ex) {
+            System.out.println("ERROR AL CONSULTAR");
             Logger.getLogger(EquipoDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
         return listaEquipos;
+    }
+
+    @Override
+    public void registarUsuario() {
+        try {
+            String queryRegistrar = "INSERT INTO equipo("
+                    + "no_serie,marca, modelo,so, hd,ram,ip, estado)"
+                    + " VALUES(2,'lenovo', 'negro', 'windows10', '500gb','8gb','192.168.10.1', 'buenas condiciones')";
+            conexion.conecta();
+            conexion.insertQuery(queryRegistrar);
+            
+            conexion.desconecta();
+
+        } catch (SQLException ex) {
+            System.out.println("error al insertar usuario " + ex.getMessage());
+        }
     }
 }

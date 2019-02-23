@@ -14,4 +14,6 @@ import java.util.List;
  */
 public interface EquipoDao {
     public List<Equipo> listaEquipos();
+   void registarUsuario();
+
 }
